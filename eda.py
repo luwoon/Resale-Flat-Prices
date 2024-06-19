@@ -28,22 +28,6 @@ plt.xlabel('Resale Price')
 plt.ylabel('Frequency')
 plt.show()
 
-# distribution of towns
-plt.figure(figsize=(10, 6))
-sns.histplot(df['town'], bins=50, kde=True, discrete=False)
-plt.title('Distribution of Towns')
-plt.xlabel('Town')
-plt.ylabel('Frequency')
-plt.show()
-
-# distribution of flat types
-plt.figure(figsize=(10, 6))
-sns.histplot(df['flat_type'], bins=50, kde=True, discrete=False)
-plt.title('Distribution of Flat Types')
-plt.xlabel('Flat Type')
-plt.ylabel('Frequency')
-plt.show()
-
 # average resale price by town
 plt.figure(figsize=(12, 8))
 avg_price_by_town = df.groupby('town')['resale_price'].mean().sort_values(ascending=False)
