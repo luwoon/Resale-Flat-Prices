@@ -10,6 +10,12 @@ The dataset used here contains information on resale prices of housing units acr
 
 EDA was then performed using Python's data analysis libraries such as Pandas, Matplotlib, and Seaborn. The following visualisations were created.
 
+![Price Distribution](Resale_Prices_Distribution.png)
+![By Town](Resale_By_Town.png)
+![By Flat Type](Resale_By_Flat_Type.png)
+![By Storey](Resale_By_Storey.png)
+![By Lease](Resale_Lease.png)
+
 ## Model building and evaluation
 
 To prepare for machine learning, unnecessary columns were dropped. Categorical variables were one-hot encoded. Next, the data was split into training and testing sets to train a RandomForestRegressor model. After training the model, predictions were made on the test set and the model's performance was evaluated using Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R-squared.
