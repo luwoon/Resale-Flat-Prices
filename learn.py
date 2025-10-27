@@ -12,27 +12,27 @@ df['month_of_year'] = pd.to_datetime(df['month']).dt.month
 columns_to_drop = ['block', 'street_name', 'lease_commence_date', 'remaining_lease', 'month']
 df = df.drop(columns_to_drop, axis=1)
 
-# one-hot encode categorical variables
+# One-hot encode categorical variables
 cat_cols = ['town', 'flat_type', 'storey_range', 'flat_model','year', 'month_of_year']
 data_encoded = pd.get_dummies(df, columns=cat_cols)
 
-# split data into features and target variable
+# Split data into features and target variable
 X = data_encoded.drop('resale_price', axis=1)
 y = data_encoded['resale_price']
 
-# split data into training and testing sets
+# Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# initialize model
+# Initialize model
 model = RandomForestRegressor(random_state=42)
 
-# train model
+# Train model
 model.fit(X_train, y_train)
 
-# predict on test set
+# Predict on test set
 y_pred = model.predict(X_test)
 
-# evaluate model
+# Evaluate model
 mse = mean_squared_error(y_test, y_pred)
 rmse = np.sqrt(mse)
 r2 = r2_score(y_test, y_pred)
