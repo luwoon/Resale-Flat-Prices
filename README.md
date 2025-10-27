@@ -10,11 +10,11 @@ The dataset used here contains information on resale prices of housing units acr
 
 EDA was then performed using Python's data analysis libraries such as Pandas, Matplotlib, and Seaborn. The following visualisations were created.
 
-![Price Distribution](Resale_Prices_Distribution.png)
-![By Town](Resale_By_Town.png)
-![By Flat Type](Resale_By_Flat_Type.png)
-![By Storey](Resale_By_Storey.png)
-![By Lease](Resale_Lease.png)
+![Price distribution](Resale_Prices_Distribution.png)
+![By town](Resale_By_Town.png)
+![By flat type](Resale_By_Flat_Type.png)
+![By storey](Resale_By_Storey.png)
+![By lease](Resale_Lease.png)
 
 ## Model building and evaluation
 
